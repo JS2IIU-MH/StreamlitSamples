@@ -19,7 +19,6 @@ def get_radio_info(call_sign):
         }
 
     response = requests.get(api_url, params=params, headers=headers)
-    print(response.status_code)
     if response.status_code == 200:
         return response.json()
     else:
